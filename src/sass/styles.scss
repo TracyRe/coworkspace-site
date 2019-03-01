@@ -1,0 +1,107 @@
+// VARIABLES
+
+$basefont: 'Catamaran', sans-serif;
+$textcolor: #2C1703;
+$accent: #0FB2D3;
+$accent2: #D1ECE5;
+$bgcolor-page: #FFFDFB;
+$bgcolor-nav: #ffffff;
+$bgcolor-button: #00839C; // A darker shade of accent
+$bgcolor-card: lighten($accent2, 75%);
+$box-shadow: 2px 2px 4px rgba(50, 50, 50, .5);
+
+
+
+// MIXINS
+
+@mixin border($size, $color) {
+  border: $size solid $color;
+}
+
+@mixin cushion($padding, $margin) {
+  padding: $padding;
+  margin: $margin;
+}
+
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin min-max-width($min-width, $max-width) {
+  min-width: $min-width;
+  max-width: $max-width;
+}
+
+@mixin tablet {
+  @media screen and (min-width: 600px) {
+    @content;
+  }
+}
+
+@mixin tablet-landscape {
+  @media screen and (min-width: 900px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
+
+// styles
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  width: 100vw;
+  font-size: 16px;
+  @include tablet {
+    font-size: 18px;
+  }
+  @include desktop {
+    font-size: 20px;
+  }
+}
+
+body {
+  width: 100%;
+  font {
+    family: $basefont;
+    weight: 400;
+    size: 1em;
+  }
+  color: $textcolor;
+  background: $bgcolor-page;
+}
+
+h1, h2, h3 {
+  font-weight: 300;
+  margin: 2rem 0 .5rem 0;
+}
+
+p {
+  line-height: 140%;
+  margin-top: 1rem;
+}
+
+p:first-of-type {
+  margin-top: 0;
+}
+
+.nav {
+  background: $bgcolor-nav;
+}
+
+.content {
+  position: relative;
+  max-width: 1200px;
+  height: 100%
+}
