@@ -1,6 +1,6 @@
 // VARIABLES
 
-$basefont: 'Catamaran', sans-serif;
+$basefont: 'Helvetica','Catamaran', sans-serif;
 $textcolor: #2C1703;
 $accent: #0FB2D3;
 $accent2: #D1ECE5;
@@ -8,7 +8,8 @@ $bgcolor-page: #FFFDFB;
 $bgcolor-nav: #ffffff;
 $bgcolor-button: #00839C; // A darker shade of accent
 $bgcolor-card: lighten($accent2, 75%);
-$box-shadow: 2px 2px 4px rgba(50, 50, 50, .5);
+$text-button: #ffffff;
+$box-shadow: 2px 2px 4px rgba(150, 150, 150, .5);
 
 
 
@@ -73,13 +74,13 @@ html {
 
 body {
   width: 100%;
-  font {
-    family: $basefont;
+  background-color: $bgcolor-page;
+  color: $textcolor;
+  font: {
+    family: 'Catamaran';
     weight: 400;
     size: 1em;
   }
-  color: $textcolor;
-  background: $bgcolor-page;
 }
 
 h1, h2, h3 {
@@ -96,12 +97,55 @@ p:first-of-type {
   margin-top: 0;
 }
 
+a {
+  color: $accent;
+  text-decoration: none;
+}
+
+a:hover, a:active {
+  color: lighten($accent, 10%);
+}
+
 .nav {
   background: $bgcolor-nav;
+  width: 100vw;
+  box-shadow: $box-shadow;
+  ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content:  space-around;
+    list-style: none;
+    li {
+      text-align: center;
+      text-transform: uppercase;
+      // @include border(1px, #f0f);
+    }
+    li:last-of-type {
+      width: 80px;
+    .signin {
+      background: $accent2;
+      color: $textcolor;
+    }
+
+    }
+  }
 }
 
 .content {
   position: relative;
   max-width: 1200px;
   height: 100%
+}
+
+button {
+  background: $bgcolor-button;
+  border-radius: 4px;
+  color: $text-button;
+  text-transform: uppercase;
+  width: 200px;
+}
+
+.card {
+  background: $bgcolor-card;
+  @include cushion(8px, 0 .5rem);
 }
