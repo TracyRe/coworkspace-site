@@ -8,30 +8,92 @@
   </head>
   <body>
     <div class="container">
-      <div class="nav">
+
+      <div class="nav">  <!-- ****** BEGIN NAV BAR ****** -->
         <ul>
-          <li><a href="#">Home</a></li>
+          <li><a href="#"><img src="./assets/img/ff-logotype-navbar.png" alt="Funky Fresh logo" title="Funky Fresh logo"></a></li>
           <li><a href="#">Plans</a></li>
           <li><a href="#">Amenities</a></li>
           <li><a href="#">Contact</a></li>
-          <li class="logotype"><a href="index.html"><img src="./assets/img/ff-logotype-navbar.png" alt="Funky Fresh logo" title="Funky Fresh logo"></a></li>
-          <li><a href="#" class="signin">Sign In</a></li>
+          <li ><a href="#">Sign In</a></li>
         </ul>
-      </div>
-      <div class="content">
-        <h1>Funky Fresh Workspaces</h1>
+      </div>   <!-- ****** END NAV BAR ****** -->
+      <div class="content-wrap">   <!-- ****** BEGIN CONTENT WRAP ****** -->
+        <div class="page-head">
+          <img class="logo-m" src="assets/img/ff-logotype-m.png" alt="">
+          <img class="logo-d" src="assets/img/ff-logotype-d.png" alt="">
+          <h1>When working from home no longer does the job.</h1>
+        </div>
 
-        <img src="assets/img/ff-logotype-d.png" alt="">
+        <div class="image">
+          {{ workspace }}
+        </div>
 
-        <img src="./assets/img/ff-logotype-navbar.png" alt="Funky Fresh logo" title="Funky Fresh logo">
+        <div class="text">
+          <p>920 SW 6th Ave Portland OR 97204  503-555-1212</p>
+          <ul>
+            <li>All hours access</li>
+            <li>High-speed internet</li>
+            <li>Printing and faxing services</li>
+            <li>On-site coffee counter</li>
+            <li>Thursday afternoon social activities</li>
+          </ul>
 
-        <p>920 SW 6th Ave<br>
-          Portland OR 97204<br>
-          503-555-1212</p>
+        </div>
 
 
-      </div>
-    </div>
+        <div class="image">
+          {{ coffee bar }}
+        </div>
+
+        <div class="text">
+          <h2>Find the WorkSpace Plan that's Right for You</h2>
+        </div>
+
+
+        <div class="card">
+          <h1>“Hot Desk"</h1>
+          <h2>$300/mo.</h2>
+          <p>Drop into a seat at one of our shared tables or common spaces. Choose between couches, standing height tables, or a standard community table. </p>
+          <p>Our most flexible membership gives you the freedom to come and go as you need.</p>
+          <p>Enjoy all amenities listed above.</p>
+
+          <button type="button" name="button">Sign Up</button>
+
+        </div>
+
+        <div class="card">
+          <h1>Dedicated Desk</h1>
+          <h2>$400/mo.</h2>
+          <p>A spacious desk to call your own. Includes a shelf and lock box. Our desks are huge, one of a kind, custom steel desks. For the size, they're the best value that we have in the space. Includes 4 hours of meeting room space.</p>
+
+          <button type="button" name="button">Sign Up</button>
+
+        </div>
+
+
+        <div class="card">
+          <h1>Private Office</h1>
+          <h2>$900/mo.</h2>
+          <p>Fully-furnished and customizable. Each office features natural lighting, a unique layout, and a modern feel. Access to all of our community spaces and the efficiency of a quiet, dedicated environment for you and your team. Our offices are all sound dampening, have external natural light, and are truly private. </p>
+
+          <button type="button" name="button">Sign Up</button>
+
+        </div>
+
+        <div class="image">
+          {{ entry }}
+        </div>
+
+        <div class="text">
+          <p><span class="company-name">FunkyFresh WorkSpace</span>
+            920 SW 6th Ave<br>
+            Portland OR 97204<br>
+            503-555-1212</p>
+          <p class="copyright">&copy; Copyright 2019 FunkyFresh Workspace</p>
+        </div>
+      </div>   <!-- ****** END CONTENT WRAP - EVERYTHING BELOW NAV BAR ****** -->
+    </div>   <!-- ****** END CONTAINER - ENTIRE PAGE ****** -->
 
       <script type="text/javascript" src="main.js"></script>
   </body>
