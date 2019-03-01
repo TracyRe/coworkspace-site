@@ -111,6 +111,7 @@ a:hover, a:active {
   color: lighten($accent, 10%);
 }
 
+
 button {
   background: $bgcolor-button;
   border-radius: 4px;
@@ -134,11 +135,16 @@ ul {
   width: 100vw;
   box-shadow: $box-shadow;
   ul {
-    width: 100%;
     display: grid;
-    grid-template-columns: calc(100vw/5) calc(100vw/5) calc(100vw/5) calc(100vw/5) calc(100vw/5);
+    grid-template-columns: calc(100%/5) calc(100%/5) calc(100%/5) calc(100%/5) calc(100%/5);
     justify-content: space-around;
     align-items: center;
+    width: 100%;
+    // @include border(1px, #f0f);
+    @include desktop {
+      width: 1200px;
+      margin: 0 auto 0 auto;
+    }
     li {
       list-style: none;
       font-size: .8rem;
@@ -147,6 +153,9 @@ ul {
       // @include border(1px, #f0f);
       @include tablet{
         font-size: 1rem;
+      }
+      a.selected {
+        color: $textcolor;
       }
     }
     li:first-of-type {
@@ -179,10 +188,13 @@ ul {
   position: relative;
   max-width: 1200px;
   height: 100%;
+  margin: 0 auto 0 auto;
+  // @include border(1px, #f0f);
 }
 
 .page-head {
-  margin: .5rem;
+  margin: .5rem auto 0 auto;
+  width: 290px;
   @include tablet {
     width: 760px;
     @include cushion(0 3%, 1rem auto);
@@ -213,24 +225,6 @@ ul {
   }
 }
 
-.address-m {
-  font-size: 1.5rem;
-  line-height: 60%;
-  margin-bottom: 1rem;
-  text-align: center;
-  white-space:pre-line;
-  .linebreak::after {
-    content: "\A";
-  }
-  @include tablet-landscape {
-    line-height: 120%;
-    white-space: normal;
-    .linebreak::after {
-      content: "•";
-    }
-  }
-}
-
 .text {
   margin: 0 .5rem 0 .5rem;
   h2 {
@@ -252,6 +246,51 @@ ul {
   }
 }
 
+.address {
+  font-size: 1.5rem;
+  line-height: 60%;
+  margin: 1rem auto 1rem auto;
+  text-align: center;
+  white-space:pre-line;
+  .linebreak::after {
+    content: "\A";
+  }
+  @include tablet-landscape {
+    line-height: 120%;
+    white-space: normal;
+    .linebreak::after {
+      content: "•";
+    }
+  }
+}
+
+.amenities {
+  display: grid;
+  grid-template-columns: 1fr;
+  position: relative;
+  left: 15%;
+  @include tablet {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1rem;
+    width: 80%;
+    margin: 0 auto 0 auto;
+    position: relative;
+    left: 10%;
+  }
+  @include tablet-landscape {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: .5rem;
+    width: 60%;
+    margin: 0 auto 0 auto;
+  }
+  @include desktop {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: .5rem;
+    width: 50%;
+    margin: 0 auto 0 auto;
+  }
+}
+
 .plan-options-frontpage {
   display: grid;
   grid-template-columns: 1fr;
@@ -261,28 +300,61 @@ ul {
   @include tablet-landscape {
     grid-template-columns: 1fr 1fr 1fr;
   }
+  .card {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content:space-between;
+    background: $bgcolor-card;
+    box-shadow: $box-shadow;
+    @include cushion(8px, 0 .5rem .5rem .5rem );
+    @include tablet {
+      @include cushion(8px, 0 .5rem .5rem .5rem);
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+    h2 {
+      font-size: 2rem;
+      margin: 0 0 1rem 0;
+    }
+  }
 }
 
-.card {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content:space-between;
-  background: $bgcolor-card;
-  box-shadow: $box-shadow;
-  @include cushion(8px, 0 .5rem .5rem .5rem );
-  @include tablet {
-    @include cushion(8px, 0 .5rem .5rem .5rem);
-  }
+.plan-options-plans {
+  display: grid;
+  grid-template-columns: 1fr;
+  // @include tablet {
+  //   grid-template-columns: 1fr 1fr;
+  // }
+  // @include tablet-landscape {
+  //   grid-template-columns: 1fr 1fr 1fr;
+  // }
+  .card {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content:space-between;
+    @include cushion(8px, 0 .5rem .5rem .5rem );
+    @include tablet {
+      @include cushion(8px, 0 .5rem .5rem .5rem);
+    }
 
-  h1 {
-    font-size: 2.5rem;
-    margin: 0;
-  }
-  h2 {
-    font-size: 2rem;
-    margin: 0 0 1rem 0;
+    img {
+      width: 100%;
+      @include tablet {
+        float: left;
+        margin-right: .5rem;
+      }
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin: 0;
+    }
   }
 }
+
 
 .company-name {
   font-weight: 600;
