@@ -86,9 +86,10 @@ body {
 h1, h2, h3 {
   font-weight: 300;
   margin: 2rem 0 .5rem 0;
+  line-height: 120%;
 }
 
-h2 {
+h1, h2 {
   text-align: center;
 }
 
@@ -114,8 +115,10 @@ button {
   background: $bgcolor-button;
   border-radius: 4px;
   color: $text-button;
+  font-size: 1rem;
   text-transform: uppercase;
-  width: 200px;
+  width: 150px;
+  @include cushion(.5rem 0, .5rem auto .5rem auto);
 }
 
 ul {
@@ -203,14 +206,44 @@ ul {
   h1 {
     display: none;
     margin-top: 0;
+    font-size: 1.65rem;
     @include tablet-landscape {
       display: block;
     }
   }
 }
 
+.address-m {
+  font-size: 1.5rem;
+  line-height: 60%;
+  margin-bottom: 1rem;
+  text-align: center;
+  white-space:pre-line;
+  .linebreak::after {
+    content: "\A";
+  }
+  @include tablet-landscape {
+    line-height: 120%;
+    white-space: normal;
+    .linebreak::after {
+      content: "•";
+    }
+  }
+}
+
 .text {
   margin: 0 .5rem 0 .5rem;
+  h2 {
+    font-size: 1.85rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    @include tablet {
+      font-size: 2rem;
+    }
+    @include tablet-landscape {
+      font-size: 2.35rem;
+    }
+  }
 }
 
 .image {
@@ -219,21 +252,35 @@ ul {
   }
 }
 
+.plan-options-frontpage {
+  display: grid;
+  grid-template-columns: 1fr;
+  @include tablet {
+    grid-template-columns: 1fr 1fr;
+  }
+  @include tablet-landscape {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
 
 .card {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content:space-between;
   background: $bgcolor-card;
   box-shadow: $box-shadow;
-  @include cushion(8px, 0 0 .5rem 0 );
+  @include cushion(8px, 0 .5rem .5rem .5rem );
   @include tablet {
     @include cushion(8px, 0 .5rem .5rem .5rem);
   }
 
   h1 {
-    font-size: 1.5rem;
-    margin-top: 0;
+    font-size: 2.5rem;
+    margin: 0;
   }
   h2 {
-    font-size: 1.25rem;
+    font-size: 2rem;
+    margin: 0 0 1rem 0;
   }
 }
 
@@ -242,5 +289,5 @@ ul {
 }
 
 .copyright {
-  font-size: .8rem;
+  font-size: .85rem;
 }
