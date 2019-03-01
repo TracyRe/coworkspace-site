@@ -117,8 +117,10 @@ button {
   border-radius: 4px;
   color: $text-button;
   font-size: 1rem;
+  font-weight: 200;
+  letter-spacing: .1rem;
   text-transform: uppercase;
-  width: 150px;
+  @include size(150px, 50px);
   @include cushion(.5rem 0, .5rem auto .5rem auto);
 }
 
@@ -243,6 +245,7 @@ ul {
 .image {
   img {
     width: 100%;
+    margin: 1rem 0 1rem 0;
   }
 }
 
@@ -292,6 +295,7 @@ ul {
 }
 
 .plan-options-frontpage {
+  max-width: 1200px;
   display: grid;
   grid-template-columns: 1fr;
   @include tablet {
@@ -323,20 +327,21 @@ ul {
 }
 
 .plan-options-plans {
+  max-width: 900px;
+  margin: 0 auto 0 auto;
   display: grid;
   grid-template-columns: 1fr;
-  // @include tablet {
-  //   grid-template-columns: 1fr 1fr;
-  // }
-  // @include tablet-landscape {
-  //   grid-template-columns: 1fr 1fr 1fr;
-  // }
+
   .card {
+    width: 100%;
     display: grid;
-    grid-template-columns: 500px 1fr;
     grid-column-gap: 1rem;
     justify-content:flex-start;
     align-content: flex-start;
+    grid-template-columns: 1fr;
+    @include tablet {
+      grid-template-columns: 1fr 1fr;
+    }
 
     @include cushion(8px, 0 .5rem .5rem .5rem );
     @include tablet {
@@ -345,19 +350,22 @@ ul {
 
     img {
       @include size(100%, auto);
-      grid-area: 2 / 1 / span 2 / 2;
+      margin-bottom: 1rem;
+      @include tablet {
+        grid-area: 2 / 1 / span 2 / 2;
+      }
     }
 
     h1 {
-      grid-area: 1 / 1 / 2 / span 2;
       font-size: 2rem;
-      margin: 0;
-      text-align: left;
+      margin: 1rem 0 .5rem 0;
+      text-align: center;
+      @include tablet {
+        text-align: left;
+        grid-area: 1 / 1 / 2 / span 2;
+      }
     }
 
-    button {
-      align-self: center;
-    }
   }
 }
 
