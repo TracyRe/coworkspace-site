@@ -142,6 +142,7 @@ ul {
     justify-content: space-around;
     align-items: center;
     width: 100%;
+    margin: 0;
     // @include border(1px, #f0f);
     @include desktop {
       width: 1200px;
