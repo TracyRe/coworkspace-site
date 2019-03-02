@@ -152,7 +152,7 @@ Competitor | Highlights | Overall Feel | Color Scheme | Typography | Notable Int
 
 #### Sketch files
 * Clone from https://github.com/TracyRe/coworkspace-site.git
-* Open in Sketch application
+* Open Sketch file in ui directory Sketch application
 * Edit files as desired
 
 #### Website
