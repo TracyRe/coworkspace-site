@@ -95,12 +95,12 @@ h1, h2 {
 
 p {
   line-height: 140%;
-  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
-p:first-of-type {
-  margin-top: 0;
-}
+// p:first-of-type {
+//   margin-top: 0;
+// }
 
 a {
   color: $accent;
@@ -248,7 +248,7 @@ ul {
 .image {
   img {
     width: 100%;
-    margin: 1rem 0 1rem 0;
+    margin: 1rem 0 0 0;
   }
 }
 
@@ -344,11 +344,15 @@ ul {
     grid-template-columns: 1fr;
     @include tablet {
       grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto 1fr;
     }
 
     @include cushion(8px, 0 .5rem .5rem .5rem );
     @include tablet {
       @include cushion(8px, 0 .5rem .5rem .5rem);
+      button {
+        margin: 0 auto auto 0;
+      }
     }
 
     img {
@@ -375,6 +379,7 @@ ul {
 
 .company-name {
   font-weight: 600;
+  margin-top: 1rem;
 }
 
 .copyright {
