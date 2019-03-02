@@ -200,7 +200,9 @@ ul {
   width: 290px;
   @include tablet {
     width: 760px;
+    @include min-max-width(500px, 80vw);
     @include cushion(0 3%, 1rem auto);
+    // @include border(1px, #f0f);
   }
   @include tablet-landscape {
     @include cushion(0, 1rem auto);
@@ -252,14 +254,14 @@ ul {
 
 .address {
   font-size: 1.5rem;
-  line-height: 60%;
+  line-height: 120%;
   margin: 1rem auto 1rem auto;
   text-align: center;
   white-space:pre-line;
   .linebreak::after {
     content: "\A";
   }
-  @include tablet-landscape {
+  @include tablet {
     line-height: 120%;
     white-space: normal;
     .linebreak::after {
