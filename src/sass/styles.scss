@@ -73,7 +73,7 @@ html {
 }
 
 body {
-  width: 100%;
+  width: 100vw;
   background-color: $bgcolor-page;
   color: $textcolor;
   font: {
@@ -81,6 +81,10 @@ body {
     weight: 400;
     size: 1em;
   }
+}
+
+.container {
+  width: 100%;
 }
 
 h1, h2, h3 {
