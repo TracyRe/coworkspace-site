@@ -169,8 +169,8 @@ N/A
 
 **Wireframes:** Balsamiq Mockups 3 v3.5.17<br>
 **Mockups:** Sketch v53.1<br>
-**Fonts:** Catamaran Light, Regular, Semibold, Bold; Bradley Hand
-**Click-through prototype:** Sketch v53.1
+**Fonts:** Catamaran Light, Regular, Semibold, Bold; Bradley Hand<br>
+**Click-through prototype:** Sketch v53.1<br>
 **Code** HTML, Sass
 
 ### License
