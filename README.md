@@ -151,6 +151,7 @@ Competitor | Highlights | Overall Feel | Color Scheme | Typography | Notable Int
 ## Setup/Installation Requirements
 
 #### Sketch files
+* View at https://coworkspace-site.netlify.com
 * Clone from https://github.com/TracyRe/coworkspace-site.git
 * Open Sketch file in ui directory Sketch application
 * Edit files as desired
