@@ -1,5 +1,7 @@
 # Co-work Space Website
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/bd701e83-a6d8-4922-9651-b765cdeeebe7/deploy-status)](https://app.netlify.com/sites/coworkspace-site/deploys) Deployed from https://coworkspace-site.netlify.com
+
 ## Design project for Epicodus - 2019-0301
 
 #### By Tracy Reith
